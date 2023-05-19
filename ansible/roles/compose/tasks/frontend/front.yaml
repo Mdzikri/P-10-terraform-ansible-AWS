@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  cobain-fe:
+    environment:
+      REACT_APP_BACKEND_URL: "http://3.106.137.207:5000"
+    image: dzikrihuda/cilist-frontend:v1
+    ports:
+      - 3000:3000

@@ -1,0 +1,7 @@
+---
+- name : Install docker
+  hosts : server1
+  become : true
+  roles :
+   - docker
+ 

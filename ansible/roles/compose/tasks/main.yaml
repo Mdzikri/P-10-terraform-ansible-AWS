@@ -1,0 +1,15 @@
+---
+- name: Create web directory
+  file: path=test/ mode=775 state=directory
+
+- name: Copy file backend.yaml
+  template: src=backend/backend.yaml dest=test/backend.yaml
+
+- name: Copy file frontend-compose.yaml
+  template: src=frontend/front.yaml dest=test/front.yaml
+
+- name: Compose up for backend
+  shell: docker-compose -f test/backend.yaml up -d
+
+- name: Compose up for frontend
+  shell: docker-compose -f test/front.yaml up -d

@@ -1,0 +1,7 @@
+---
+- name : deploy
+  hosts : server1
+  become : true
+  roles :
+   - compose
+ 
